@@ -1,6 +1,6 @@
 ## About:
 
-[Docker](http://www.docker.com/) image based on [digitalwonderland/oracle-jre-8](https://registry.hub.docker.com/u/digitalwonderland/oracle-jre-8/)
+[Docker](http://www.docker.com/) image based on [digitalwonderland/base](https://registry.hub.docker.com/u/digitalwonderland/base/)
 
 ## Additional Software:
 

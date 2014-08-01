@@ -1,11 +1,11 @@
 # Elasticsearch
 
-FROM digitalwonderland/oracle-jre-8:latest
+FROM digitalwonderland/base:latest
 
 ADD src/ /
 
 # Install Elasticsearch
-RUN yum install -y elasticsearch which && yum clean all;
+RUN yum install -y elasticsearch jna which && yum clean all;
 
 # Install Marvel Plugin - only free for Development!
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest;
