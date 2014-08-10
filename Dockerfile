@@ -7,7 +7,10 @@ ADD src/ /
 # Install Elasticsearch
 RUN yum install -y elasticsearch jna which && yum clean all;
 
-# Install Marvel Plugin - only free for Development!
+# Install Kibana
+RUN /usr/share/elasticsearch/bin/plugin -url http://download.elasticsearch.org/kibana/kibana/kibana-latest.zip -install elasticsearch/kibana3
+
+# Install Marvel - only free for Development!
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest;
 
 

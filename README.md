@@ -5,4 +5,5 @@
 ## Additional Software:
 
 * [Elasticsearch](http://www.elasticsearch.org/)
-* [Marvel](http://www.elasticsearch.org/overview/marvel/) is installed - only free for Development!
+* [Kibana](http://www.elasticsearch.org/overview/kibana/)
+* [Marvel](http://www.elasticsearch.org/overview/marvel/) - only free for Development!
