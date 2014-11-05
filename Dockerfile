@@ -9,7 +9,7 @@ RUN chmod +x /usr/local/sbin/start.sh
 RUN yum install -y elasticsearch jna which && yum clean all;
 
 # Install Kibana
-RUN /usr/share/elasticsearch/bin/plugin -url https://github.com/elasticsearch/kibana/archive/v3.1.1.zip -install elasticsearch/kibana3
+RUN /usr/share/elasticsearch/bin/plugin -url https://download.elasticsearch.org/kibana/kibana/kibana-3.1.1.zip -install elasticsearch/kibana3
 
 # Install Marvel - only free for Development!
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest;
