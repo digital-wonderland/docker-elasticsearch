@@ -8,7 +8,7 @@
   "files": [
     {
       "paths": [
-        "/var/log/elasticsearch/elasticsearch.log"
+        "/var/log/elasticsearch/{{getv "/elasticsearch/cluster/name"}}.log"
       ],
       "fields": {
         "type": "elasticsearch"
@@ -16,7 +16,7 @@
     },
     {
       "paths": [
-        "/var/log/elasticsearch/elasticsearch_index_indexing_slowlog.log"
+        "/var/log/elasticsearch/{{getv "/elasticsearch/cluster/name"}}_index_indexing_slowlog.log"
       ],
       "fields": {
         "type": "elasticsearch-indexing-slow"
@@ -24,7 +24,7 @@
     },
     {
       "paths": [
-        "/var/log/elasticsearch/elasticsearch_index_search_slowlog.log"
+        "/var/log/elasticsearch/{{getv "/elasticsearch/cluster/name"}}_index_search_slowlog.log"
       ],
       "fields": {
         "type": "elasticsearch-search-slow"

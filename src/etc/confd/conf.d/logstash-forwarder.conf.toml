@@ -1,0 +1,6 @@
+[template]
+src = "logstash-forwarder.conf.tmpl"
+dest = "/etc/logstash-forwarder.conf"
+keys = [
+    "/ELASTICSEARCH/CLUSTER/NAME",
+]
