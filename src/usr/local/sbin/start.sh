@@ -14,7 +14,7 @@ if [ -r "$DEFAULT" ]; then
 fi
 
 DAEMON="/usr/share/elasticsearch/bin/elasticsearch"
-DAEMON_OPTS="-p /var/run/elasticsearch/elasticsearch.pid -Des.default.config=$CONF_FILE -Des.default.path.home=$ES_HOME -Des.default.path.logs=$LOG_DIR -Des.default.path.data=$DATA_DIR -Des.default.path.work=$WORK_DIR -Des.default.path.conf=$CONF_DIR -Des.cluster.name=$ELASTICSEARCH_CLUSTER_NAME"
+DAEMON_OPTS="-p /var/run/elasticsearch/elasticsearch.pid -Des.default.config=$CONF_FILE -Des.default.path.home=$ES_HOME -Des.default.path.logs=$LOG_DIR -Des.default.path.data=$DATA_DIR -Des.default.path.work=$WORK_DIR -Des.default.path.conf=$CONF_DIR -Des.cluster.name=$ELASTICSEARCH_CLUSTER_NAME $@"
 export DAEMON DAEMON_OPTS
 
-su -s /bin/bash $ES_USER -c '${DAEMON} ${DAEMON_OPTS} "$@"'
+su -s /bin/bash $ES_USER -c "${DAEMON} ${DAEMON_OPTS}"
